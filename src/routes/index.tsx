@@ -8,6 +8,7 @@ import {
   ArrowUpRight,
   X,
   ArrowDown,
+  Menu,
 } from "lucide-react";
 
 import Masonry from "react-masonry-css";
@@ -93,6 +94,7 @@ function Index() {
   const [offerOpen, setOfferOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
   const current = SLIDES[slide];
 
@@ -141,7 +143,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* NAV */}
-      <header className="absolute top-0 left-0 right-0 z-40">
+      <header className="absolute top-0 left-0 right-0 z-40 ">
         <div className="container-x flex items-center justify-between py-6">
           <a
             href="#"
@@ -153,6 +155,14 @@ function Index() {
               className="h-6 w-auto"
             />
           </a>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((v) => !v)}
+            className="md:hidden"
+            aria-label="Menu"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
           <nav className="hidden md:flex items-center gap-9 text-[14px] text-ink">
             <div
               className="relative"
@@ -206,6 +216,41 @@ function Index() {
               <Search className="h-4 w-4" />
             </button>
           </nav>
+          {mobileMenuOpen && (
+            <nav className="fixed left-0 top-[62px] w-full bg-white shadow-lg md:hidden z-50">
+              <a
+                href="#oferta"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-6 py-4 border-b border-line/20"
+              >
+                Oferta
+              </a>
+
+              <a
+                href="#o-firmie"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-6 py-4 border-b border-line/20"
+              >
+                O firmie
+              </a>
+
+              <a
+                href="#realizacje"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-6 py-4 border-b border-line/20"
+              >
+                Realizacje
+              </a>
+
+              <a
+                href="#kontakt"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-6 py-4"
+              >
+                Kontakt
+              </a>
+            </nav>
+          )}
         </div>
         {/* Search drawer */}
         <div
@@ -531,7 +576,7 @@ function Index() {
       <footer className="bg-[#0E0E0E] text-white py-16 md:py-20">
         <div className="container-x">
           {/* Top */}
-          <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-8 border-b border-white/20 pb-12 text-center md:text-left">
+          <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-8 border-b  pb-12 text-center md:text-left">
             <img
               src={giardDesignLogo}
               alt="GiardDesign"
@@ -585,7 +630,7 @@ function Index() {
           </div>
 
           {/* Bottom */}
-          <div className="flex flex-col items-center md:flex-row md:justify-between gap-6 border-t border-white/10 pt-8 text-center md:text-left">
+          <div className="flex flex-col items-center md:flex-row md:justify-between gap-6   pt-8 text-center md:text-left">
             <span>Prawa zastrzeżone © 2022</span>
 
             <div className="flex items-center gap-2">
