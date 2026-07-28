@@ -25,7 +25,7 @@ import p6 from "@/assets/proj-6.jpg";
 import p7 from "@/assets/proj-7.jpg";
 import p8 from "@/assets/proj-8.jpg";
 import p9 from "@/assets/proj-9.jpg";
-import logo from "@/assets/logo-full-light.png";
+import logo from "@/assets/logo-full-light.svg";
 import giardDesignLogo from "@/assets/logo.svg";
 import giardDesignLogoBlack from "@/assets/logo-black.svg";
 import pencilLogo from "@/assets/pencil-logo.svg";
