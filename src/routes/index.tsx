@@ -504,18 +504,18 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#0E0E0E] text-white py-[80px]">
+      <footer className="bg-[#0E0E0E] text-white py-16 md:py-20">
         <div className="container-x">
-          {/* Górna sekcja */}
-          <div className="flex items-center justify-between border-b border-white/20 pb-[48px]">
+          {/* Top */}
+          <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between gap-8 border-b border-white/20 pb-12 text-center md:text-left">
             <img
               src={giardDesignLogo}
               alt="GiardDesign"
               className="h-6 w-auto"
             />
 
-            <div className="flex items-center gap-[24px]">
-              <span className="text-[16px]">
+            <div className="flex flex-col items-center md:flex-row md:items-center gap-6 md:gap-8">
+              <span className="max-w-md text-lg leading-relaxed">
                 Daj znać, co możemy dla Ciebie zrobić!
               </span>
 
@@ -528,23 +528,40 @@ function Index() {
             </div>
           </div>
 
-          {/* Środkowa sekcja */}
-          <div className="flex items-center justify-between py-[48px]">
-            <div className="flex items-center gap-[48px] text-[14px]">
-              <a href="#">Kontakt</a>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">LinkedIn</a>
-            </div>
+          {/* Middle */}
+          <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-10 py-12 text-center lg:text-left">
+            <nav className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 text-[15px]">
+              <a href="#" className="hover:opacity-70 transition">
+                Kontakt
+              </a>
 
-            <div className="flex items-center gap-[48px] text-[14px]">
+              <a href="#" className="hover:opacity-70 transition">
+                Instagram
+              </a>
+
+              <a href="#" className="hover:opacity-70 transition">
+                Facebook
+              </a>
+
+              <a href="#" className="hover:opacity-70 transition">
+                LinkedIn
+              </a>
+            </nav>
+
+            <div className="flex flex-col items-center sm:flex-row sm:items-center gap-3 sm:gap-8 text-[15px]">
               <span>000-000-000</span>
-              <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+
+              <a
+                href="mailto:giarddesign@kontakt.pl"
+                className="break-all hover:opacity-70 transition"
+              >
+                giarddesign@kontakt.pl
+              </a>
             </div>
           </div>
 
-          {/* Dolna sekcja */}
-          <div className="flex items-center justify-between text-[14px]">
+          {/* Bottom */}
+          <div className="flex flex-col items-center md:flex-row md:justify-between gap-6 border-t border-white/10 pt-8 text-center md:text-left">
             <span>Prawa zastrzeżone © 2022</span>
 
             <div className="flex items-center gap-2">
