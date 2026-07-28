@@ -481,23 +481,41 @@ function Index() {
       {/* CTA */}
       <section id="kontakt" className="bg-background py-16 md:py-24">
         <div className="container-x">
-          <div className="bg-forest text-white rounded-[8px] px-8 md:px-16 py-14 md:py-20 flex flex-col md:flex-row md:items-center justify-between gap-10">
-            <h3 className="text-[26px] md:text-[36px] leading-tight font-medium max-w-2xl">
-              Zostańmy w kontakcie!
-              <br />
-              Znajdziesz nas na{" "}
-              <span className="font-serif-i font-inter">Instagramie</span>.
-            </h3>
-            <div className="flex items-center gap-8">
-              <p className="text-[13px] opacity-90 max-w-[180px]">
-                Śledź nasze najnowsze realizacje!
-              </p>
-              <a
-                href="#"
-                className="pill-btn bg-white text-ink hover:bg-beige-soft"
-              >
-                Instagram
-              </a>
+          <div className="bg-forest px-8 py-14 md:px-20 md:py-20">
+            <div className="mx-auto grid max-w-[980px] gap-12 md:grid-cols-[1fr_220px] md:gap-20">
+              {/* Left */}
+              <div>
+                <h3
+                  className="
+              text-left
+              text-white/95
+              text-[34px]
+              md:text-[48px]
+              leading-[1.15]
+              tracking-[-0.02em]
+              font-medium
+            "
+                >
+                  Zostańmy w kontakcie!
+                  <br />
+                  Znajdziesz nas na{" "}
+                  <span className="font-serif-i font-inter">Instagramie.</span>
+                </h3>
+              </div>
+
+              {/* Right */}
+              <div className="flex flex-col items-start gap-6">
+                <p className="max-w-[170px] text-[15px] leading-[1.6] text-white/80">
+                  Śledź nasze najnowsze realizacje!
+                </p>
+
+                <a
+                  href="#"
+                  className="pill-btn bg-white text-ink hover:bg-beige-soft"
+                >
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
         </div>
