@@ -424,32 +424,38 @@ function Index() {
 
         <div className="container-x mt-16">
           <div className="relative">
-            <Masonry
-              breakpointCols={breakpointColumnsObj}
-              className="flex gap-6"
-              columnClassName="space-y-6"
+            <div
+              className={`overflow-hidden transition-all duration-700 ease-out ${
+                expanded ? "max-h-[5000px]" : "max-h-[1050px]"
+              }`}
             >
-              {visibleProjects.map((src, i) => {
-                return (
-                  <button
-                    type="button"
-                    key={i}
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="flex gap-6"
+                columnClassName="space-y-6"
+              >
+                {visibleProjects.map((src, i) => {
+                  return (
+                    <button
+                      type="button"
+                      key={i}
 
-                    className="block w-full overflow-hidden group relative will-change-transform transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
-                    onClick={() => setLightbox(i)}
-                  >
-                    <img
-                      src={src}
-                      alt={`Projekt ogrodu ${i + 1}`}
-                      loading="lazy"
-                      className="w-full transition-transform duration-700 group-hover:scale-105"
-                    />
+                      className="block w-full overflow-hidden group relative will-change-transform transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      onClick={() => setLightbox(i)}
+                    >
+                      <img
+                        src={src}
+                        alt={`Projekt ogrodu ${i + 1}`}
+                        loading="lazy"
+                        className="w-full transition-transform duration-700 group-hover:scale-105"
+                      />
 
-                    <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-500" />
-                  </button>
-                );
-              })}
-            </Masonry>
+                      <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-500" />
+                    </button>
+                  );
+                })}
+              </Masonry>
+            </div>
             <div
               aria-hidden
               className={`pointer-events-none absolute inset-x-0 bottom-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
