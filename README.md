@@ -39,6 +39,6 @@ During development I also migrated the project from the initial Lovable setup to
 
 ## Author
 
-Paweł Zaleski
+Paweł Załęski
 
 GitHub: https://github.com/devpz
